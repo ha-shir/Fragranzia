@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+        .mainimg{
+            margin-left: 100px;
+        }
+        .s1{
+         /* border: #0d2a46; */
+        }
+         .qty-selector {
+             display: inline-flex;
+              align-items: center;
+               border: 1px solid #00334e;
+                border-radius: 4px; }
+         .qty-selector button { background: none;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 1.2rem; }
+       .qty-selector input { width: 40px;
+           text-align: center;
+           border: none;
+           font-size: 1rem; }
+    .actions button {
+      display: inline-block;
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      margin-top: 10px;
+      /* margin-right: 250px; */
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .product-info h1 {
+         margin: 0 0 10px;
+         }
+    .rating {
+         color: #3f8;
+          margin: 8px 0;
+         }
+    /* .stock-message {
+         color: #d32f2f;
+          font-weight: bold;
+           margin-bottom: 10px;
+         } */
+    .price { display: flex;
+         align-items: center;
+         text-decoration: solid black;
+          gap: 10px; font-size: 1.5rem;
+           margin: 15px 0; }
+    .price .old { text-decoration: line-through;
+         color: #777;
+          font-size: 1rem;
+         }
+    .price .discount { color: #2a7d2a;
+         font-weight: bold;
+         }
+         .bgwhite{
+      border-bottom-right-radius:100px ;
+    border-top-left-radius:100px ;
+    box-shadow: 5px 5px 5px 5px rgba(42, 41, 41, 0.1);
+   /* border: 10px;
+   border: black; */
+   height: 300px;
+   width: 280px;
+     border-style: solid;
+  border-width:1px;
+    border-color: antiquewhite;
+transition: 0.5s;
+     /* display: flex;
+     justify-content: space-between;
+     gap: 30px;
+  */
+}
+.bgwhite:hover{
+      border-bottom-left-radius:100px ;
+    border-top-right-radius:100px ;
+       border-bottom-right-radius:0px ;
+    border-top-left-radius:0px ;
+    /* height:270px ;
+    width:290px ; */
+
+   
+}
+.fearured {
+  width: 90%;
+  height: 550px;
+  aspect-ratio: 2/1;
+  margin: auto;
+  /* gap: 10px; */
+  border: solid black 2px;
+  overflow-x:scroll;
+  /* overflow-y: hidden; */
+  border: none;
+  scrollbar-width: none;
+  margin-top: 30px;
+  
+  
+}
+.collection{
+    margin-top: 30px;
+    margin-left: 35px;
+    border-radius: 30px;
+    height:200px ;
+    width:200px ;
+    transition: width 2s,height 2s, transform 1ms;
+      /* transition: width 2s height 2s; */
+       /* transition-timing-function: linear; */
+    }
+    .collection:hover{
+    height:230px ;
+    width:230px ;
+}
+.sub1{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+       
+
+}
+
+.btnAddToCart{
+    height:45px;
+    width: 250px;
+    background-color: #0d2a46;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    text-decoration:none;
+}
+.main{
+    gap: 200px;
+    justify-content: center;
+}
+.btn{
+   color:#003146;
+  background-color: white;
+ height: 20px;
+ /* padding: 50px; */
+ /* justify-content: center; */}
+ .footer{
+    padding: 100px;
+    background-color: rgb(139, 184, 190,1);
+    height:500px;
+}
+.footer1{
+    padding: 2px;
+}
+.bt{
+   background-color: rgb(139, 184, 190,1);
+   height: 50px;
+   width: 10px;
+   border: 1px solid black;
+}
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid ">
+    <a class="navbar-brand fs-2  "  href="#"><h1 style="color: #0d2a46;font-weight: bold;">Fragranzia</h1></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+          <form class="d-flex" role="search">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent ">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Gifting</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="about.html">About</a>
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul> -->
+        <input class="form-control me-2 rounded-pill" type="search" placeholder="Search Here" aria-label="Search"/>
+        <div class="btn123 d-flex gap-2">
+       <a href="cart.html"></a>
+        <button class="btn2  rounded-circle" type="submit"><i class="fa-solid fa-bell"></i></button>
+        <button class="btn3  rounded-circle" type="submit"><i class="fa-solid fa-user"></i></button>
+        </div>
+        
+    
+      </form>
+    </div>
+  </div>
+</nav>
+    <p style="margin-left: 100px;">Home > Products > kyros Eau De Parfum 100ml for Men</p>
+<div class="main d-flex mt-4">
+<div class="sub1 gap-4 ">
+   
+          <img src="smallbox1.jpg" alt="" height="118px" width="118px" >
+     
+          <img src="smallbox2.png" alt="" height="118px" width="118px">
+     
+          <img src="smallbox3.jpg" alt="" height="118px" width="118px">
+   </div> 
+    <div class="sub2">
+    <img src="perfume2.jpg" alt="" height="400px" width="400px">
+    <div class="actions">
+        <button style="background-color: #00334e; color: white;">Purchase Now</button>
+        <button style="background-color: #00334e; color: white;">Add to Cart</button>
+      </div>
+
+    </div>
+     <div class="product-info">
+      <h2>Autograph eau de parfum 100ml for men</h2>
+      <div class="rating"> <span>4.5 ★ </span>  <span style="color:#777;">1,000 Ratings</span></div>
+      <div class="stock-message">Hurry-only few stocks left!</div>
+
+     <div class="price">
+        <span>Rs 899</span>
+        <span class="old">Rs 2000</span>
+        <span class="discount">61% off</span>
+      </div>
+      
+       <div class="qty-selector">
+        <button type="button">-</button>
+        <input type="text" value="1" />
+        <button type="button">+</button>
+      </div>
+
+       <div class="delivery">
+        <h4>Delivery</h4>
+        Delivery by 28 Aug, Wednesday | Free<br />
+        <small>if ordered before 9:24 PM</small>
+      </div>
+
+      
+      <div class="description">
+        <h4>Description</h4>
+        <p>
+          This fragrance exudes a confident and enigmatic personality. Its <br>
+          composition features a top note of lemon and mandarin  with a twist <br>
+          of apple that enhance the freshness. the herat reveals a warm blend <br>
+          of high-grade lavender and ahint of cinnamon, beautifully wrapped in <br>
+          patchouli,musk,and vanilla to ensure a powrfull and flowing scent <br>
+        </p>
+      </div>
+       
+      <div class="available offers">
+        <h4>Avaibale Offers</h4><br>
+        <p>Buy two of the same product and get a third one free.</p>
+        <p>Enjoy free standard shipping on orders exceeding ₹1,399.</p>
+        <p>Get 15% off your first order.</p>
+        <p>Receive a free tool case with the purchase of any perfume over ₹2,000.</p>
+      </div>
+
+  
+</div>    
+</div>
+     
+
+    <div class="OZ">
+ <h3>Suggested For You</h3><br>
+</div>
+<div class="fearured gap-4 ">
+    
+    <div class="pics d-flex gap-5">
+    <div class="pic1 ">
+            <div class="bgwhite">
+
+        <img class="collection" src="perfume1.jpg" alt=""height="250px" width="270px"><br></div>
+        <p style="margin-top: 15px;">Autograph Eau De Parfum 100ml <br>For Man</p>
+        <h4> <span>Rs 650</span><span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 1400</span></h4>
+        <button  class="btnAddToCart">Add to Cart</button>
+    </div>
+     <div class="pic2">
+            <div class="bgwhite">
+
+        <img class="collection" src="perfume2.jpg" alt="" ></div>
+         <p style="margin-top: 15px;">Kyros Eau De Perfum 100ml <br>For Man</p>
+        <h4>Rs 899<span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 2000</span></h4>
+        <button  class="btnAddToCart">Add to Cart</button>
+    </div>
+     <div class="pic3">
+            <div class="bgwhite">
+
+        <img class="collection" src="perfume3.jpg" alt=""></div>
+         <p style="margin-top: 15px;">Autograph Eau De Parfum 100ml <br>For Man</p>
+        <h4>Rs 999<span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 2241</span></h4>
+        <button class="btnAddToCart">Add to Cart</button>
+    </div>
+     <div class="pic4">
+      <div class="bgwhite">
+        <img class="collection" src="perfume4.jpg" alt=""></div>
+         <p style="margin-top: 15px;">Royal Eau De Parfum 100ml <br>For Man</p>
+        <h4>Rs 650<span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 1400</span></h4>
+        <button  class="btnAddToCart">Add to Cart</button>
+    </div>
+     <div class="pic5">
+            <div class="bgwhite">
+
+        <img class="collection" src="perfume5.jpg" alt=""></div>
+         <p style="margin-top: 15px;">Royal Eau De Parfum 100ml <br>For Man</p>
+        <h4><span> Rs 650<span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 1400</span></span></h4>
+        <button  class="btnAddToCart">Add to Cart</button>
+    </div>
+ 
+ </div>
+</div>
+
+
+<div class="footer mt-5">
+    <div class="footer1 mt-5 d-flex justify-content-between">
+    <h2 style="margin-top: 90px; font-weight: bolder;">fragranzia</h2>
+
+    <div class="pages">
+         <p style="font-weight: bold;">Page</p>
+  <p>Home</p>
+  <p>Products</p>
+  <p>Gifting</p>
+  <p>About</p>
+  <p>profile</p>
+    </div>
+
+
+    <div class="quick links">
+         <p style="font-weight: bold;">Quick Links</p>
+         <p>Privacy policy</p>
+        <p>Terms and conditions</p>
+        <p>FAQs</p>
+        <p>Customer Service</p>
+         <p>profile</p>
+    </div>
+
+
+
+    <div class="info">
+        <p>heyheloo@gmail.com</p>
+        <p>+9400653289</p>
+        <p style="font-weight: bold;">Social Media</p>
+
+        <div class="icons">
+        <i class="fa-brands fa-facebook fa-xl"></i>
+        <i class="fa-brands fa-twitter fa-xl"></i>
+        <i class="fa-brands fa-pinterest fa-xl"></i>
+        <i class="fa-brands fa-youtube fa-xl"></i>
+        <i class="fa-brands fa-instagram fa-xl"></i>
+
+    </div>
+    </div>
+
+    </div>
+   
+    
+</body>
+</html>

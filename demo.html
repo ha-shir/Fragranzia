@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ .fearured {
+  width: 90%;
+  height: 550px;
+  /* display: flex; */
+  aspect-ratio: 2/1;
+  padding: 20px 50px;
+  margin: auto;
+  border: solid black 2px;
+  overflow-x: scroll;
+    /* overflow-x:hidden; */
+
+  overflow-y: hidden;
+  /* white-space: nowrap; */
+  scroll-snap-type: x mandatory;
+  border: none;
+  margin-top: 30px;
+  
+  
+}
+
+.bgwhite{
+      border-bottom-right-radius:100px ;
+    border-top-left-radius:100px ;
+    box-shadow: 5px 5px 5px 5px rgba(42, 41, 41, 0.1);
+   /* border: 10px;
+   border: black; */
+   height: 300px;
+   width: 280px;
+     border-style: solid;
+  border-width:1px;
+    border-color: antiquewhite;
+
+     transition:  transform 0.1s;
+ 
+}
+.bgwhite:hover{
+      border-bottom-left-radius:100px ;
+    border-top-right-radius:100px ;
+       border-bottom-right-radius:0px ;
+    border-top-left-radius:0px ;
+    /* height:270px ;
+    width:290px ; */
+
+    /* transition-timing-function: linear; */
+}
+.bgwhite{
+    background-color: white;
+}
+
+.collection{
+    margin-top: 30px;
+    margin-left: 35px;
+    border-radius: 30px;
+    height:200px ;
+    width:200px ;
+    transition: width 2s,height 2s, transform 1ms;
+      /* transition: width 2s height 2s; */
+       /* transition-timing-function: linear; */
+
+}
+.collection:hover{
+    height:230px ;
+    width:230px ;
+    /* transition-timing-function: ease-in; */
+}
+.btnAddToCart{
+    height:45px;
+    width: 250px;
+    background-color: #0d2a46;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    text-decoration:none;
+}
+.pics{
+    display: flex;
+    gap: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="fearured">
+    
+    <div class="pics">
+    <div class="pic1">
+            <div class="bgwhite">
+
+        <img class="collection" src="perfume1.jpg" alt=""height="250px" width="270px"><br></div>
+        <p style="margin-top: 15px;">Autograph Eau De Parfum 100ml <br>For Man</p>
+        <h2> <span>Rs 650</span><span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 1400</span></h2>
+        <button  class="btnAddToCart">Add to Cart</button>
+    </div>
+     <div class="pic2">
+            <div class="bgwhite">
+
+        <img class="collection" src="perfume2.jpg" alt="" ></div>
+         <p style="margin-top: 15px;">Kyros Eau De Perfum 100ml <br>For Man</p>
+        <h2>Rs 899<span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 2000</span></h2>
+        <button  class="btnAddToCart">Add to Cart</button>
+    </div>
+     <div class="pic3">
+            <div class="bgwhite">
+
+        <img class="collection" src="perfume3.jpg" alt=""></div>
+         <p style="margin-top: 15px;">Autograph Eau De Parfum 100ml <br>For Man</p>
+        <h2>Rs 999<span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 2241</span></h2>
+        <button class="btnAddToCart">Add to Cart</button>
+    </div>
+     <div class="pic4">
+      <div class="bgwhite">
+        <img class="collection" src="perfume4.jpg" alt=""></div>
+         <p style="margin-top: 15px;">Royal Eau De Parfum 100ml <br>For Man</p>
+        <h2>Rs 650<span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 1400</span></h2>
+        <button  class="btnAddToCart">Add to Cart</button>
+    </div>
+     <div class="pic5">
+            <div class="bgwhite">
+
+        <img class="collection" src="perfume5.jpg" alt=""></div>
+         <p style="margin-top: 15px;">Royal Eau De Parfum 100ml <br>For Man</p>
+        <h2><span> Rs 650<span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 1400</span></span></h2>
+        <button  class="btnAddToCart">Add to Cart</button>
+    </div>
+ 
+ </div>
+</div>
+</body>
+</html>

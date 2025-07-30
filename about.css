@@ -1,0 +1,114 @@
+.footer{
+    padding: 100px;
+    background-color: rgb(139, 184, 190,1);
+ 
+}
+
+
+
+.footer1{
+    padding: 2px;
+   
+}
+
+
+
+.bt{
+   background-color: rgb(139, 184, 190,1);
+   height: 50px;
+   width: 100%;
+   border: 1px solid black;
+}
+
+
+.box1{
+    border-bottom-right-radius:100px ;
+    border-top-left-radius: 100px;
+    background-image: url(caucasian-woman-applying-perfume-her-neck\ 2.png);
+    background-size: cover;
+}
+
+.box2{
+    border-bottom-left-radius:100px ;
+    border-top-right-radius: 100px;
+    background-image: url(caucasian-woman-applying-perfume-her-neck\ 2\ \(1\).png);
+      background-size: cover;
+}
+
+
+
+@media (max-width: 992px) {
+  .footer1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer h2 {
+    margin-top: 20px ;
+  }
+
+  .pages,
+  .quick.links,
+  .info {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .bt {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .main .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    margin-left: 0 ;
+    padding: 0 20px;
+  }
+
+  .box1,
+  .box2 {
+    margin-left: 0 ;
+    width: 90%;
+    height: 250px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .navbar-nav {
+    padding-left: 0 ;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-control,
+  .btn {
+    width: 100% ;
+    margin: 10px 0;
+  }
+
+  .footer {
+    padding: 50px 20px;
+  }
+
+  .bt p {
+    font-size: 12px;
+  }
+
+  .footer1 h2 {
+    font-size: 24px;
+  }
+
+  .box1,
+  .box2 {
+    height: 200px;
+  }
+}

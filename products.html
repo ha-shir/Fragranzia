@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Products - Fragranzia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    .navbar-custom {
+      /* padding: 20px 30px; */
+    }
+
+    .promo-banner {
+      background-color: #003146;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      padding: 8px 0;
+    }
+
+    .sort-bar {
+      padding: 20px 30px;
+    }
+
+    .sort-bar span {
+      font-weight: bold;
+    }
+
+    .sort-options a {
+      text-decoration: none;
+      color: black;
+      margin-right: 20px;
+    }
+
+    .sort-options a.active {
+      color: #003146;
+      font-weight: 600;
+    }
+
+    .filter-btn {
+      border: 1.5px solid black;
+      border-radius: 50px;
+      padding: 5px 18px;
+      font-weight: 500;
+      background-color: white;
+    }
+
+    .filter-btn i {
+      margin-left: 6px;
+    }
+    .bgwhite{
+      border-bottom-right-radius:100px ;
+    border-top-left-radius:100px ;
+    box-shadow: 5px 5px 5px 5px rgba(42, 41, 41, 0.1);
+   /* border: 10px;
+   border: black; */
+   height: 300px;
+   width: 280px;
+     border-style: solid;
+  border-width:1px;
+    border-color: antiquewhite;
+transition: 0.5s;
+     /* display: flex;
+     justify-content: space-between;
+     gap: 30px;
+  */
+}
+.bgwhite:hover{
+      border-bottom-left-radius:100px ;
+    border-top-right-radius:100px ;
+       border-bottom-right-radius:0px ;
+    border-top-left-radius:0px ;
+    /* height:270px ;
+    width:290px ; */
+
+   
+}
+.collection{
+    margin-top: 30px;
+    margin-left: 35px;
+    border-radius: 30px;
+    height:200px ;
+    width:200px ;
+    transition: width 2s,height 2s, transform 1ms;
+      /* transition: width 2s height 2s; */
+       /* transition-timing-function: linear; */
+    }
+    .collection:hover{
+    height:230px ;
+    width:230px ;
+}
+
+.btnAddToCart{
+    height:45px;
+    width: 250px;
+    background-color: #0d2a46;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    text-decoration:none;
+}
+.main{
+    gap: 200px;
+    justify-content: center;
+}
+.btn{
+   color:#003146;
+  background-color: white;
+ height: 20px;
+ /* padding: 50px; */
+ /* justify-content: center; */
+
+}
+.footer{
+    padding: 100px;
+    background-color: rgb(139, 184, 190,1);
+ 
+}
+
+
+
+.footer1{
+    padding: 2px;
+   
+}
+
+
+
+.bt{
+   background-color: rgb(139, 184, 190,1);
+   height: 50px;
+   width: 100%;
+   border: 1px solid black;
+}
+
+
+
+@media (max-width: 1200px) {
+  .main {
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+  .pic1, .pic2, .pic3 {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main {
+    flex-direction: column ;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .bgwhite {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .collection {
+    height: 200px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btnAddToCart {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .sort-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .sort-options {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .navbar .form-control {
+    width: 100px;
+  }
+
+  .footer1 {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer1 > div {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .form-control {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .sort-bar h3 {
+    font-size: 1.2rem;
+  }
+
+  .sort-bar {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .sort-options a {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .footer1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer1 > div {
+    margin-bottom: 20px;
+  }
+
+  .collection {
+    width: 180px;
+    height: 180px;
+  }
+
+  .btnAddToCart {
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .bgwhite {
+    height: auto;
+    padding: 10px;
+  }
+
+  .footer h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .collection {
+    width: 160px;
+    height: 160px;
+  }
+
+  .btnAddToCart {
+    width: 100%;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .footer {
+    padding: 30px;
+    height: auto;
+  }
+
+  .bt {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white navbar-custom">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold fs-3" style="color:#003146;" href="#">Fragranzia</a>
+    <div class="collapse navbar-collapse justify-content-center">
+      <ul class="navbar-nav mb-2 mb-lg-0 gap-4">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" style="color:#003146;" href="#">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Gifting</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      </ul>
+    </div>
+    <form class="d-flex align-items-center gap-2">
+      <input class="form-control rounded-pill" type="search" placeholder="Search Here" />
+      <button class="btn rounded-circle border" type="button"><i class="fa-solid fa-cart-shopping"></i></button>
+      <button class="btn rounded-circle border" type="button"><i class="fa-solid fa-bell"></i></button>
+      <button class="btn rounded-circle border" type="button"><i class="fa-solid fa-user"></i></button>
+    </form>
+  </div>
+</nav>
+
+
+<div class="promo-banner">
+  ENJOY FESTIVE DISCOUNTS! FREE SHIPPING ABOVE 999 !
+</div>
+
+
+<div class="sort-bar d-flex flex-wrap justify-content-between align-items-center">
+  <div>
+    <h3 class="mb-2 fw-bold">All Products</h3>
+    <p class="text-muted">Home > Products</p>
+  </div>
+  <div class="d-flex align-items-center gap-3 flex-wrap">
+    <span>Sort By:</span>
+    <div class="sort-options d-flex flex-wrap gap-2">
+      <a href="#" class="active">Relevance</a>
+      <a href="#">Newest First</a>
+      <a href="#">Popularity</a>
+      <a href="#">Price--Low to High</a>
+      <a href="#">Price--High to Low</a>
+    </div>
+    <button class="filter-btn">
+      Filter <i class="fa-solid fa-sliders"></i>
+    </button>
+  </div>
+</div>
+<div class="main d-flex " >
+    
+   
+    <div class="pic1">
+            <div class="bgwhite">
+
+        <img class="collection" src="perfume2.jpg" alt=""height="250px" width="270px"><br></div>
+        <p style="margin-top: 15px;">Autograph Eau De Parfum 100ml <br>For Man</p>
+        <h2> <span>Rs 650</span><span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 1400</span></h2>
+        <button  class="btnAddToCart">Add to Cart</button>
+    </div>
+     <div class="pic1">
+            <div class="bgwhite">
+
+        <img class="collection" src="athar2.jpg" alt="" ></div>
+         <p style="margin-top: 15px;">Kyros Eau De Perfum 100ml <br>For Man</p>
+        <h2>Rs 899<span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 2000</span></h2>
+        <button  class="btnAddToCart">Add to Cart</button>
+    </div>
+    <div class="pic1">
+      <div class="bgwhite">
+
+        <img class="collection" src="faciu8.png" alt=""></div>
+         <p style="margin-top: 15px;">Autograph Eau De Parfum 100ml <br>For Man</p>
+        <h2>Rs 999<span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 2241</span></h2>
+        <button class="btnAddToCart">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="main d-flex mt-5" >
+    
+   
+    <div class="pic1">
+            <div class="bgwhite">
+
+        <img class="collection" src="perfume4.jpg" alt=""height="250px" width="270px"><br></div>
+        <p style="margin-top: 15px;">Autograph Eau De Parfum 100ml <br>For Man</p>
+        <h2> <span>Rs 650</span><span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 1400</span></h2>
+        <button  class="btnAddToCart">Add to Cart</button>
+    </div>
+     <div class="pic2">
+            <div class="bgwhite">
+
+        <img class="collection" src="silentstrom.png" alt="" ></div>
+         <p style="margin-top: 15px;">Kyros Eau De Perfum 100ml <br>For Man</p>
+        <h2>Rs 899<span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 2000</span></h2>
+        <button  class="btnAddToCart">Add to Cart</button>
+    </div>
+    <div class="pic3">
+      <div class="bgwhite">
+
+        <img class="collection" src="athar4.jpg" alt=""></div>
+         <p style="margin-top: 15px;">Autograph Eau De Parfum 100ml <br>For Man</p>
+        <h2>Rs 999<span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 2241</span></h2>
+        <button class="btnAddToCart">Add to Cart</button>
+    </div>
+    </div>
+    <div class="main d-flex mt-5 " >
+    
+   
+    <div class="pic1">
+            <div class="bgwhite">
+
+        <img class="collection" src="perfume5.jpg" alt=""height="250px" width="270px"><br></div>
+        <p style="margin-top: 15px;">Autograph Eau De Parfum 100ml <br>For Man</p>
+        <h2> <span>Rs 650</span><span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 1400</span></h2>
+        <button  class="btnAddToCart">Add to Cart</button>
+    </div>
+     <div class="pic2">
+            <div class="bgwhite">
+
+        <img class="collection" src="athar5.jpg" alt="" ></div>
+         <p style="margin-top: 15px;">Kyros Eau De Perfum 100ml <br>For Man</p>
+        <h2>Rs 899<span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 2000</span></h2>
+        <button  class="btnAddToCart">Add to Cart</button>
+    </div>
+    <div class="pic3">
+      <div class="bgwhite">
+
+        <img class="collection" src="perfume1.jpg" alt=""></div>
+         <p style="margin-top: 15px;">Autograph Eau De Parfum 100ml <br>For Man</p>
+        <h2>Rs 999<span style="font-size: 20px; margin-left: 10px; text-decoration:  line-through;"> Rs 2241</span></h2>
+        <button class="btnAddToCart">Add to Cart</button>
+    </div>
+    </div>
+    <div>
+      <button class="btn container-fluid ">Load more</button>
+    </div>
+    
+
+    <div class="footer mt-5">
+    <div class="footer1 mt-5 d-flex justify-content-between">
+    <h2 style="margin-top: 90px; font-weight: bolder;">fragranzia</h2>
+
+    <div class="pages">
+         <p style="font-weight: bold;">Page</p>
+  <p>Home</p>
+  <p>Products</p>
+  <p>Gifting</p>
+  <p>About</p>
+  <p>profile</p>
+    </div>
+
+
+    <div class="quick links">
+         <p style="font-weight: bold;">Quick Links</p>
+         <p>Privacy policy</p>
+        <p>Terms and conditions</p>
+        <p>FAQs</p>
+        <p>Customer Service</p>
+         <p>profile</p>
+    </div>
+
+
+
+    <div class="info">
+        <p>heyheloo@gmail.com</p>
+        <p>+9400653289</p>
+        <p style="font-weight: bold;">Social Media</p>
+
+        <div class="icons">
+        <i class="fa-brands fa-facebook fa-xl"></i>
+        <i class="fa-brands fa-twitter fa-xl"></i>
+        <i class="fa-brands fa-pinterest fa-xl"></i>
+        <i class="fa-brands fa-youtube fa-xl"></i>
+        <i class="fa-brands fa-instagram fa-xl"></i>
+
+    </div>
+    </div>
+
+    
+
+
+    
+
+    </div>
+    </div>
+   <div class="bt container-fluid  d-flex  justify-content-between">
+    <p>web access | web acces | web acces | web acces |</p>
+    <p>copyright</p>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
