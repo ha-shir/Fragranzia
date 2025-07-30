@@ -426,6 +426,7 @@ transition: 0.5s;
     position: static;
     text-align: center;
     color: black;
+    margin-top: 10px;
   }
 }
 
@@ -550,6 +551,8 @@ transition: 0.5s;
 
   .carousel-inner img {
     height: 200px;
+    
   }
+  
 }
 
